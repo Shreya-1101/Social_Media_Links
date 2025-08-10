@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Links</title>
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4e54c8, #8f94fb);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 40px;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
+
+        /* Specific Colors for Each Platform */
+        .facebook:hover { color: #1877f2; }
+        .twitter:hover { color: #1da1f2; }
+        .instagram:hover { color: #e1306c; }
+        .linkedin:hover { color: #0077b5; }
+        .youtube:hover { color: #ff0000; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Follow Me on Social Media</h1>
+        <div class="social-links">
+            <a href="#" class="facebook" data-link="https://www.facebook.com/" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="twitter" data-link="https://twitter.com/" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="instagram" data-link="https://www.instagram.com/" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="linkedin" data-link="https://www.linkedin.com/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="youtube" data-link="https://www.youtube.com/" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <script>
+        // Open links in new tab on click
+        document.querySelectorAll('.social-links a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.open(this.getAttribute('data-link'), '_blank');
+            });
+        });
+    </script>
+
+</body>
+</html>
